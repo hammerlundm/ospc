@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=1]
 
-[ext_resource path="res://scenes/space.gd" type="Script" id=1]
+[ext_resource path="res://scripts/space.gd" type="Script" id=1]
 [ext_resource path="res://scripts/ background.gd" type="Script" id=2]
 [ext_resource path="res://assets/3.png" type="Texture" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
@@ -51,21 +51,40 @@ params/stretch_mode = 0
 script/script = ExtResource( 5 )
 HOVER = true
 
-[node name="thing" type="TextureButton" parent="foreground"]
+[node name="rock" type="TextureButton" parent="foreground"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 241.0
-margin/top = 134.0
-margin/right = 369.0
-margin/bottom = 262.0
+margin/left = 250.0
+margin/top = 476.0
+margin/right = 511.0
+margin/bottom = 727.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 textures/normal = ExtResource( 4 )
-params/resize_mode = 0
+params/resize_mode = 1
+params/stretch_mode = 0
+script/script = ExtResource( 5 )
+HOVER = true
+
+[node name="wire" type="TextureButton" parent="foreground"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 785.0
+margin/top = 342.0
+margin/right = 890.0
+margin/bottom = 434.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 4 )
+params/resize_mode = 1
 params/stretch_mode = 0
 script/script = ExtResource( 5 )
 HOVER = true

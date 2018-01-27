@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=1]
 
-[ext_resource path="res://scenes/control_room.gd" type="Script" id=1]
+[ext_resource path="res://scripts/control_room.gd" type="Script" id=1]
 [ext_resource path="res://scripts/ background.gd" type="Script" id=2]
 [ext_resource path="res://assets/Control_Room_Placeholder.png" type="Texture" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
@@ -47,6 +47,44 @@ enabled_focus_mode = 2
 shortcut = null
 textures/normal = ExtResource( 4 )
 params/resize_mode = 0
+params/stretch_mode = 0
+script/script = ExtResource( 5 )
+HOVER = true
+
+[node name="tool" type="TextureButton" parent="foreground"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 809.0
+margin/top = 641.0
+margin/right = 937.0
+margin/bottom = 769.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 4 )
+params/resize_mode = 0
+params/stretch_mode = 0
+script/script = ExtResource( 5 )
+HOVER = true
+
+[node name="transmitter" type="TextureButton" parent="foreground"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 362.0
+margin/top = 351.0
+margin/right = 456.0
+margin/bottom = 445.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 4 )
+params/resize_mode = 1
 params/stretch_mode = 0
 script/script = ExtResource( 5 )
 HOVER = true

@@ -19,14 +19,17 @@ func _ready():
 		to_control.connect("button_up", self, "_on_to_control_button_up")
 
 func _on_to_space_button_up():
-	get_parent().set_name("asdf")
-	var space_scene = space.instance()
-	space_scene.set_name("background")
-	get_node("../..").add_child(space_scene)
-	get_node("../..").mouse_deactivate()
-	get_parent().queue_free()
-	get_node("../../camera").set_limit(MARGIN_LEFT, 0)
-	get_node("../../camera").set_limit(MARGIN_RIGHT, 1280)
+	if get_node("../..").battery_location == "suit":
+		get_parent().set_name("asdf")
+		var space_scene = space.instance()
+		space_scene.set_name("background")
+		get_node("../..").add_child(space_scene)
+		get_node("../..").mouse_deactivate()
+		get_parent().queue_free()
+		get_node("../../camera").set_limit(MARGIN_LEFT, 0)
+		get_node("../../camera").set_limit(MARGIN_RIGHT, 1280)
+	else:
+		get_node("../../camera/textbox").display("My suit needs a battery!")
 
 func _on_to_living_button_up():
 	get_parent().set_name("asdf")
