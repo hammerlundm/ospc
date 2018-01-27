@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=6 format=1]
 
-[ext_resource path="res://scripts/ background.gd" type="Script" id=1]
-[ext_resource path="res://assets/4.png" type="Texture" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://assets/space.png" type="Texture" id=1]
+[ext_resource path="res://scripts/ background.gd" type="Script" id=2]
+[ext_resource path="res://assets/4.png" type="Texture" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://scripts/button.gd" type="Script" id=5]
 
 [node name="background" type="ParallaxBackground"]
 
@@ -17,17 +19,29 @@ scroll/limit_begin = Vector2( 0, 0 )
 scroll/limit_end = Vector2( 0, 0 )
 scroll/ignore_camera_zoom = false
 
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+
+transform/pos = Vector2( -1280, 0 )
+motion/scale = Vector2( 0.5, 1 )
+motion/offset = Vector2( 0, 0 )
+motion/mirroring = Vector2( 0, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer"]
+
+texture = ExtResource( 1 )
+centered = false
+
 [node name="foreground" type="ParallaxLayer" parent="."]
 
 transform/pos = Vector2( -1280, 0 )
 motion/scale = Vector2( 1, 1 )
 motion/offset = Vector2( 0, 0 )
 motion/mirroring = Vector2( 0, 0 )
-script/script = ExtResource( 1 )
+script/script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="foreground"]
 
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 centered = false
 
 [node name="to_space" type="TextureButton" parent="foreground"]
@@ -43,9 +57,11 @@ margin/bottom = 159.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 3 )
+textures/normal = ExtResource( 4 )
 params/resize_mode = 0
 params/stretch_mode = 0
+script/script = ExtResource( 5 )
+HOVER = true
 
 [node name="to_control" type="TextureButton" parent="foreground"]
 
@@ -60,8 +76,10 @@ margin/bottom = 470.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 3 )
+textures/normal = ExtResource( 4 )
 params/resize_mode = 0
 params/stretch_mode = 0
+script/script = ExtResource( 5 )
+HOVER = true
 
 

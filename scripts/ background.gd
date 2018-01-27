@@ -19,16 +19,31 @@ func _ready():
 		to_control.connect("button_up", self, "_on_to_control_button_up")
 
 func _on_to_space_button_up():
+	get_parent().set_name("asdf")
 	var space_scene = space.instance()
-	get_parent().get_parent().add_child(space_scene)
-	queue_free()
+	space_scene.set_name("background")
+	get_node("../..").add_child(space_scene)
+	get_node("../..").mouse_deactivate()
+	get_parent().queue_free()
+	get_node("../../camera").set_limit(MARGIN_LEFT, 0)
+	get_node("../../camera").set_limit(MARGIN_RIGHT, 1280)
 
 func _on_to_living_button_up():
+	get_parent().set_name("asdf")
 	var living_scene = living.instance()
-	get_parent().get_parent().add_child(living_scene)
-	queue_free()
+	living_scene.set_name("background")
+	get_node("../..").add_child(living_scene)
+	get_node("../..").mouse_deactivate()
+	get_parent().queue_free()
+	get_node("../../camera").set_limit(MARGIN_LEFT, -1280)
+	get_node("../../camera").set_limit(MARGIN_RIGHT, 1280)
 
 func _on_to_control_button_up():
+	get_parent().set_name("asdf")
 	var control_scene = control.instance()
-	get_parent().get_parent().add_child(control_scene)
-	queue_free()
+	control_scene.set_name("background")
+	get_node("../..").add_child(control_scene)
+	get_node("../..").mouse_deactivate()
+	get_parent().queue_free()
+	get_node("../../camera").set_limit(MARGIN_LEFT, 0)
+	get_node("../../camera").set_limit(MARGIN_RIGHT, 1280)
