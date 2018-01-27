@@ -1,0 +1,197 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://scripts/bookshelf.gd" type="Script" id=1]
+[ext_resource path="res://assets/alien.png" type="Texture" id=2]
+[ext_resource path="res://scripts/drag.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+bg_color = Color( 0.6, 0.6, 0.6, 1 )
+light_color = Color( 0.8, 0.8, 0.8, 1 )
+dark_color = Color( 0.8, 0.8, 0.8, 1 )
+border_size = 5
+border_blend = true
+draw_bg = true
+
+[node name="bookshelf" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="shelf" type="Panel" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 512.0
+margin/bottom = 512.0
+
+[node name="slot0" type="Panel" parent="shelf"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 128.0
+margin/bottom = 256.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="slot1" type="Panel" parent="shelf"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 128.0
+margin/top = 0.0
+margin/right = 256.0
+margin/bottom = 256.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="slot2" type="Panel" parent="shelf"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 256.0
+margin/top = 0.0
+margin/right = 384.0
+margin/bottom = 256.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="slot3" type="Panel" parent="shelf"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 384.0
+margin/top = 0.0
+margin/right = 512.0
+margin/bottom = 256.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="slot4" type="Panel" parent="shelf"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 256.0
+margin/right = 128.0
+margin/bottom = 512.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="slot5" type="Panel" parent="shelf"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 128.0
+margin/top = 256.0
+margin/right = 256.0
+margin/bottom = 512.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="slot6" type="Panel" parent="shelf"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 256.0
+margin/top = 256.0
+margin/right = 384.0
+margin/bottom = 512.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="slot7" type="Panel" parent="shelf"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 384.0
+margin/top = 256.0
+margin/right = 512.0
+margin/bottom = 512.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="books" type="Panel" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 512.0
+margin/top = 0.0
+margin/right = 768.0
+margin/bottom = 512.0
+
+[node name="book0" type="Sprite" parent="books"]
+
+texture = ExtResource( 2 )
+centered = false
+script/script = ExtResource( 3 )
+
+[node name="book1" type="Sprite" parent="books"]
+
+transform/pos = Vector2( 128, 0 )
+texture = ExtResource( 2 )
+centered = false
+script/script = ExtResource( 3 )
+
+[node name="book2" type="Sprite" parent="books"]
+
+transform/pos = Vector2( 0, 128 )
+texture = ExtResource( 2 )
+centered = false
+script/script = ExtResource( 3 )
+
+[node name="book3" type="Sprite" parent="books"]
+
+transform/pos = Vector2( 128, 128 )
+texture = ExtResource( 2 )
+centered = false
+script/script = ExtResource( 3 )
+
+[node name="book4" type="Sprite" parent="books"]
+
+transform/pos = Vector2( 0, 256 )
+texture = ExtResource( 2 )
+centered = false
+script/script = ExtResource( 3 )
+
+[node name="book5" type="Sprite" parent="books"]
+
+transform/pos = Vector2( 128, 256 )
+texture = ExtResource( 2 )
+centered = false
+script/script = ExtResource( 3 )
+
+[node name="book6" type="Sprite" parent="books"]
+
+transform/pos = Vector2( 0, 384 )
+texture = ExtResource( 2 )
+centered = false
+script/script = ExtResource( 3 )
+
+[node name="book7" type="Sprite" parent="books"]
+
+transform/pos = Vector2( 128, 384 )
+texture = ExtResource( 2 )
+centered = false
+script/script = ExtResource( 3 )
+
+
