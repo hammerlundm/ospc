@@ -36,7 +36,7 @@ font/font = ExtResource( 5 )
 
 [node name="textbox" type="Panel"]
 
-visibility/self_opacity = 0.5
+visibility/self_opacity = 0.75
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
