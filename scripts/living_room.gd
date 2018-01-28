@@ -19,7 +19,7 @@ func _ready():
 	get_node("foreground/fridge").connect("button_up", get_node("../camera/textbox"), "display", ["Space food doesn't even need to be refrigerated."])
 	get_node("foreground/window").connect("button_up", get_node("../camera/textbox"), "display", ["These curtains really match the cold empiness of space.\nAlso my shoes."])
 	get_node("foreground/table").connect("button_up", get_node("../camera/textbox"), "display", ["[i]Waiter, table for one[/i]\nThis is where I eat, alone..."])
-	get_node("foreground/chair").connect("button_up", get_node("../camera/textbox"), "display", ["*Pulls cord like  I'm in Flash Dance*"])
+	get_node("foreground/chair").connect("button_up", get_node("../camera/textbox"), "display", ["*Pulls cord like I'm in Flash Dance*"])
 	get_node("foreground/ladder").connect("button_up", get_node("../camera/textbox"), "display", ["I bought this at [i]Home Depot™[/i]"])
 
 func add_gloves():

@@ -25,7 +25,7 @@ func test():
 	for i in range(16):
 		if solution[i] != -1 and solution[i] != state[i]:
 			return
-	get_node("../../camera/textbox").display("My transmitter is fixed! Now I can send out messages!\n[i]Hi, I'd like order a large...[/i]")
+	get_node("../../camera/textbox").display("My transmitter is fixed! Now I can send out messages!\n[i]Hi, I'd like to order a large...[/i]")
 	set_opacity(0)
 	thing = true
 
