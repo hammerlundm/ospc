@@ -6,7 +6,7 @@ var solution = [1, 3, -1, 2, 2, -1, -1, 3, 0, 1, 1, 2, 1, -1, 3, 1]
 func _ready():
 	var button
 	for i in range(16):
-		button = get_node("Panel/Sprite" + str(i))
+		button = get_node("thing/Panel/Sprite" + str(i))
 		button.connect("button_up", self, "twist", [button, i])
 
 func twist(node, idx):

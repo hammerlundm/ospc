@@ -15,7 +15,7 @@ func test():
 			return
 	queue_free()
 	get_node("../..").add_item("manual")
-	get_node("../../camera/textbox").display("manual")
+	get_node("../../camera/textbox").display("Blah Blah Blah... Transmitters sure have a lot of wires")
 	get_node("../foreground/manual").queue_free()
 	get_node("../..").mouse_deactivate()
 	

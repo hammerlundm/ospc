@@ -36,6 +36,7 @@ font/font = ExtResource( 5 )
 
 [node name="textbox" type="Panel"]
 
+visibility/opacity = 0.0
 visibility/self_opacity = 0.75
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -62,7 +63,7 @@ custom_fonts/italics_font = SubResource( 2 )
 custom_fonts/bold_font = SubResource( 3 )
 custom_fonts/normal_font = SubResource( 4 )
 bbcode/enabled = true
-bbcode/bbcode = "[center]Some words and [b]text and stuff[/b] I'm [i]making it really [b]really[/b] really[/i] long to test stuff[/center]"
+bbcode/bbcode = ""
 visible_characters = -1
 percent_visible = 1.0
 

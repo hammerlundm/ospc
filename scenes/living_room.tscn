@@ -53,10 +53,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 1967.0
+margin/left = 1934.0
 margin/top = 31.0
-margin/right = 2254.0
-margin/bottom = 159.0
+margin/right = 2016.0
+margin/bottom = 171.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -73,7 +73,7 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 2201.0
+margin/left = 2289.0
 margin/top = 342.0
 margin/right = 2428.0
 margin/bottom = 470.0
@@ -157,6 +157,106 @@ margin/left = 1901.0
 margin/top = 486.0
 margin/right = 2102.0
 margin/bottom = 784.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 5 )
+params/resize_mode = 1
+params/stretch_mode = 0
+script/script = ExtResource( 6 )
+HOVER = true
+
+[node name="fridge" type="TextureButton" parent="foreground"]
+
+visibility/opacity = 0.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -2.0
+margin/top = 196.0
+margin/right = 218.0
+margin/bottom = 830.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 5 )
+params/resize_mode = 1
+params/stretch_mode = 0
+script/script = ExtResource( 6 )
+HOVER = true
+
+[node name="window" type="TextureButton" parent="foreground"]
+
+visibility/opacity = 0.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 245.0
+margin/top = 194.0
+margin/right = 462.0
+margin/bottom = 437.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 5 )
+params/resize_mode = 1
+params/stretch_mode = 0
+script/script = ExtResource( 6 )
+HOVER = true
+
+[node name="table" type="TextureButton" parent="foreground"]
+
+visibility/opacity = 0.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 563.0
+margin/top = 590.0
+margin/right = 831.0
+margin/bottom = 644.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 5 )
+params/resize_mode = 1
+params/stretch_mode = 0
+script/script = ExtResource( 6 )
+HOVER = true
+
+[node name="chair" type="TextureButton" parent="foreground"]
+
+visibility/opacity = 0.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 833.0
+margin/top = 541.0
+margin/right = 971.0
+margin/bottom = 785.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 5 )
+params/resize_mode = 1
+params/stretch_mode = 0
+script/script = ExtResource( 6 )
+HOVER = true
+
+[node name="ladder" type="TextureButton" parent="foreground"]
+
+visibility/opacity = 0.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1684.0
+margin/top = -1.0
+margin/right = 1888.0
+margin/bottom = 790.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null

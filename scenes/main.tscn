@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=1]
+[gd_scene load_steps=19 format=1]
 
 [ext_resource path="res://scripts/main.gd" type="Script" id=1]
 [ext_resource path="res://scripts/camera.gd" type="Script" id=2]
 [ext_resource path="res://scenes/textbox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/control_room.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/ggj2018.ogg" type="AudioStream" id=5]
 
 [sub_resource type="StyleBoxFlat" id=4]
 
@@ -148,15 +149,15 @@ border_size = 0
 border_blend = true
 draw_bg = true
 
-[sub_resource type="ConvexPolygonShape2D" id=2]
+[sub_resource type="ConvexPolygonShape2D" id=15]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 1277.69, 618.753, 1107.64, 601.068, 1096.76, 3.86401, 1274.97, 1.14328 )
+points = Vector2Array( 1284.74, 840.918, 1115.31, 832.324, 1096.76, 3.86401, 1274.97, 1.14328 )
 
-[sub_resource type="ConvexPolygonShape2D" id=3]
+[sub_resource type="ConvexPolygonShape2D" id=16]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -7.8634, -0.217102, 166.265, 3.86401, 155.381, 579.302, 4.37994, 586.104 )
+points = Vector2Array( -7.8634, -0.217102, 166.265, 3.86401, 165.041, 826.185, 4.20764, 828.641 )
 
 [node name="main" type="Control"]
 
@@ -193,7 +194,6 @@ SPEED = 300
 
 [node name="inventory" type="Panel" parent="camera"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -389,7 +389,7 @@ flat = false
 [node name="right" type="Area2D" parent="camera"]
 
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 15 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
@@ -400,15 +400,15 @@ angular_damp = 1.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="camera/right"]
 
 build_mode = 0
-polygon = Vector2Array( 1274.97, 1.14328, 1096.76, 3.86401, 1107.64, 601.068, 1277.69, 618.753 )
+polygon = Vector2Array( 1274.97, 1.14328, 1096.76, 3.86401, 1115.31, 832.324, 1284.74, 840.918 )
 shape_range = Vector2( 0, 0 )
 trigger = false
 
 [node name="left" type="Area2D" parent="camera"]
 
 input/pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/shape = SubResource( 16 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 6.13867, 3.68329 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -417,13 +417,25 @@ angular_damp = 1.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="camera/left"]
 
+transform/pos = Vector2( 6.13867, 3.68329 )
 build_mode = 0
-polygon = Vector2Array( 4.37994, 586.104, 155.381, 579.302, 166.265, 3.86401, -7.8634, -0.217102 )
+polygon = Vector2Array( 4.20764, 828.641, 165.041, 826.185, 166.265, 3.86401, -7.8634, -0.217102 )
 shape_range = Vector2( 0, 0 )
 trigger = false
 
 [node name="background" parent="." instance=ExtResource( 4 )]
 
 scroll/ignore_camera_zoom = true
+
+[node name="StreamPlayer" type="StreamPlayer" parent="."]
+
+stream/stream = ExtResource( 5 )
+stream/play = false
+stream/loop = true
+stream/volume_db = 0.0
+stream/autoplay = true
+stream/paused = false
+stream/loop_restart_time = 0.0
+stream/buffering_ms = 500
 
 

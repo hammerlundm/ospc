@@ -16,16 +16,21 @@ func _ready():
 	else:
 		get_node("foreground/manual").connect("button_up", self, "add_manual")
 	get_node("foreground/battery").connect("button_up", self, "add_battery")
+	get_node("foreground/fridge").connect("button_up", get_node("../camera/textbox"), "display", ["Space food doesn't even need to be refrigerated."])
+	get_node("foreground/window").connect("button_up", get_node("../camera/textbox"), "display", ["Something Something Tyra Banks"])
+	get_node("foreground/table").connect("button_up", get_node("../camera/textbox"), "display", ["[i]Waiter, table for one[/i]\nThis is where I eat, alone..."])
+	get_node("foreground/chair").connect("button_up", get_node("../camera/textbox"), "display", ["*Pulls cord*"])
+	get_node("foreground/ladder").connect("button_up", get_node("../camera/textbox"), "display", ["I bought this at [i]Home Depot™[/i]"])
 
 func add_gloves():
 	get_parent().add_item("gloves")
-	get_node("../camera/textbox").display("I need these gloves")
+	get_node("../camera/textbox").display("Hats, gloves, scarves... Ya know, space attire.")
 	get_node("foreground/gloves").queue_free()
 	get_node("..").mouse_deactivate()
 
 func add_soap():
 	get_parent().add_item("soap")
-	get_node("../camera/textbox").display("soap")
+	get_node("../camera/textbox").display("[i]Warning: highly reactive![/i]\nWhat kind of soap is this?")
 	get_node("foreground/soap").queue_free()
 	get_node("..").mouse_deactivate()
 
@@ -36,10 +41,12 @@ func add_manual():
 func add_battery():
 	if get_node("..").selected == "battery":
 		get_node("..").remove_item("battery")
-		get_node("../camera/textbox").display("put the battery back")
+		get_node("../camera/textbox").display("Let's put the battery back in.")
 		get_node("..").battery_location = "suit"
 	elif get_node("..").battery_location == "suit":
 		get_parent().add_item("battery")
-		get_node("../camera/textbox").display("got the battery")
+		get_node("../camera/textbox").display("I might need the battery.")
 		get_node("..").mouse_deactivate()
 		get_node("..").battery_location = "inventory"
+	elif get_node("..").selected == null:
+		get_node("../camera/textbox").display("I can't use this without the battery.")

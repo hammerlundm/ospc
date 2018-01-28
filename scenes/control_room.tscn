@@ -113,4 +113,65 @@ params/stretch_mode = 0
 script/script = ExtResource( 5 )
 HOVER = true
 
+[node name="button" type="TextureButton" parent="foreground"]
+
+visibility/opacity = 0.0
+rect/rotation = -20.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 104.0
+margin/top = 495.0
+margin/right = 183.0
+margin/bottom = 607.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 4 )
+params/resize_mode = 1
+params/stretch_mode = 0
+script/script = ExtResource( 5 )
+HOVER = true
+
+[node name="chair" type="TextureButton" parent="foreground"]
+
+visibility/opacity = 0.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 505.0
+margin/top = 449.0
+margin/right = 731.0
+margin/bottom = 707.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 4 )
+params/resize_mode = 1
+params/stretch_mode = 0
+script/script = ExtResource( 5 )
+HOVER = true
+
+[node name="button2" type="TextureButton" parent="foreground"]
+
+visibility/opacity = 0.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1041.0
+margin/top = 525.0
+margin/right = 1161.0
+margin/bottom = 677.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 4 )
+params/resize_mode = 1
+params/stretch_mode = 0
+script/script = ExtResource( 5 )
+HOVER = true
+
 

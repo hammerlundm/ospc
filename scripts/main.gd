@@ -11,6 +11,9 @@ var battery_location = "suit"
 func _ready():
 	set_process_unhandled_input(true)
 	mouse_deactivate()
+	get_node("camera").set_limit(MARGIN_LEFT, 0)
+	get_node("camera").set_limit(MARGIN_RIGHT, 1280)
+	get_node("camera/textbox").display("You've broken your transmitter, all alone on an empty space ship... Figure it out.")
 	var panel
 	for i in range(10):
 		panel = get_node("camera/inventory/Panel" + str(i))
@@ -66,14 +69,23 @@ func set_selected(panel, idx):
 				remove_item("soap")
 				remove_item("rock")
 				add_item("chemicals")
+				get_node("camera/textbox").display("Mixing things... for science.")
 			elif (selected == "chemicals" and inventory[idx] == "gloves") or (selected == "gloves" and inventory[idx] == "chemicals"):
 				remove_item("chemicals")
 				remove_item("gloves")
 				add_item("chemicals+gloves")
+				get_node("camera/textbox").display("A good cleaning agent.")
 			elif (selected == "dirty_tool" and inventory[idx] == "chemicals+gloves") or (selected == "chemicals+gloves" and inventory[idx] == "dirty_tool"):
 				remove_item("dirty_tool")
 				remove_item("chemicals+gloves")
 				add_item("tool")
+				get_node("camera/textbox").display("Now this is clean enough to use.")
+			elif (selected == "dirty_tool" and inventory[idx] == "soap") or (selected == "soap" and inventory[idx] == "dirty_tool"):
+				get_node("camera/textbox").display("The soap isn't strong enough to clean this by itself.")
+			elif (selected == "dirty_tool" and inventory[idx] == "chemicals") or (selected == "chemicals" and inventory[idx] == "dirty_tool"):
+				get_node("camera/textbox").display("I should cover my hands first.")
+			else:
+				get_node("camera/textbox").display("Oops, try again!")
 
 func _unhandled_input(event):
 	if event.type == InputEvent.MOUSE_BUTTON and event.pressed:

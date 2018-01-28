@@ -29,7 +29,7 @@ func _input(event):
 			var slot
 			for i in range(8):
 				slot = get_node("../../shelf/slot" + str(i))
-				if check_collision(slot.get_pos(), Vector2(128, 256), click_pos):
+				if check_collision(slot.get_pos(), slot.get_size(), click_pos):
 					if get_node("../..").state[i] == null:
 						set_pos(slot.get_pos() + get_pos() - get_global_pos())
 						get_node("../..").state[i] = self
