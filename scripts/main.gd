@@ -13,7 +13,7 @@ func _ready():
 	mouse_deactivate()
 	get_node("camera").set_limit(MARGIN_LEFT, 0)
 	get_node("camera").set_limit(MARGIN_RIGHT, 1280)
-	get_node("camera/textbox").display("You've broken your transmitter, all alone on an empty space ship... Figure it out.")
+	get_node("camera/textbox").display("You've broken your transmitter, all alone on an empty space ship, and you're so hungry... Time to get fixin'.")
 	var panel
 	for i in range(10):
 		panel = get_node("camera/inventory/Panel" + str(i))

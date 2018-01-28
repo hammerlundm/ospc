@@ -12,7 +12,7 @@ func _ready():
 	else:
 		get_node("foreground/wire").connect("button_up", self, "add_wire")
 	get_node("foreground/moon").connect("button_up", get_node("../camera/textbox"), "display", ["Awoooo!"])
-	get_node("foreground/alien").connect("button_up", get_node("../camera/textbox"), "display", ["I don't need to bother him right now."])
+	get_node("foreground/alien").connect("button_up", get_node("../camera/textbox"), "display", ["A friend! But she's just out of reach."])
 	get_node("foreground/battery").connect("button_up", get_node("../camera/textbox"), "display", ["Almost fully charged!"])
 	get_node("foreground/oxygen").connect("button_up", get_node("../camera/textbox"), "display", ["[i]Tell me how I'm supposed to breathe with no air.[/i]"])
 
