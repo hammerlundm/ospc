@@ -20,5 +20,5 @@ func test():
 	for i in range(16):
 		if solution[i] != -1 and solution[i] != state[i]:
 			return
-	get_node("../../camera/textbox").display("It's Fixed!\nHi, I'd like a large...")
+	get_node("../../camera/textbox").display("My transmitter is fixed! Now I can send out messages!\n[i]Hi, I'd like order a large...[/i]")
 	queue_free()

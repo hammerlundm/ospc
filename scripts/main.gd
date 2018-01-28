@@ -24,6 +24,7 @@ func _ready():
 func show_name(idx):
 	if idx < inventory.size():
 		var name = inventory[idx]
+		name = name.replace("+", "_and_")
 		var arr = name.split("_")
 		var actual = ""
 		for s in arr:
@@ -66,6 +67,9 @@ func mouse_deactivate():
 		Input.set_custom_mouse_cursor(mouse_off)
 
 func set_selected(panel, idx):
+	if get_node("background").has_node("bookshelf") or get_node("background").has_node("wire") or get_node("background").has_node("transmission"):
+		selected = null
+		return
 	if idx < inventory.size():
 		if selected == null:
 				selected = inventory[idx]

@@ -23,6 +23,7 @@ func _input(event):
 			get_node("Area2D/top").set_texture(scissor_closed)
 			if inside:
 				queue_free()
+				get_node("../..").remove_item("tool")
 				get_node("../..").add_item("wire")
 				get_node("../foreground/wire").queue_free()
 		else:
