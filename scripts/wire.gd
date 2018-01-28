@@ -24,7 +24,8 @@ func _input(event):
 			if inside:
 				queue_free()
 				get_node("../..").add_item("wire")
-				get_node("../../camera/textbox").display("I got a wire")
+				get_node("../../camera/textbox").display("")
+				get_node("../../camera/textbox").display("I got a wire!")
 				get_node("../foreground/wire").queue_free()
 		else:
 			get_node("Area2D/top").set_texture(scissor_open)

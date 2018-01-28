@@ -1,6 +1,7 @@
 extends Panel
 
 var box
+var clicks = 0
 
 func _ready():
 	box = get_node("text");
@@ -12,4 +13,6 @@ func display(text):
 
 func _input(event):
 	if event.type == InputEvent.MOUSE_BUTTON && event.pressed:
-		set_opacity(0)
+		clicks += 1
+		if clicks % 2 == 0:
+			set_opacity(0)

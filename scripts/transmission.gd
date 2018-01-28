@@ -20,4 +20,5 @@ func test():
 	for i in range(16):
 		if solution[i] != -1 and solution[i] != state[i]:
 			return
-	get_tree().get_root().queue_free()
+	get_node("../../camera/textbox").display("It's Fixed!\nHi, I'd like a large...")
+	queue_free()

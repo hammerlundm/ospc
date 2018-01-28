@@ -23,7 +23,13 @@ func _ready():
 
 func show_name(idx):
 	if idx < inventory.size():
-		get_node("camera/textbox").display(inventory[idx])
+		var name = inventory[idx]
+		var arr = name.split("_")
+		var actual = ""
+		for s in arr:
+			s[0] = s[0].to_upper()
+			actual += s + " "
+		get_node("camera/textbox").display(actual.substr(0, actual.length() - 1))
 
 func add_item(item):
 	var box = get_node("camera/inventory/Panel" + str(inventory.size()))

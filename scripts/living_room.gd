@@ -35,6 +35,8 @@ func add_soap():
 	get_node("..").mouse_deactivate()
 
 func add_manual():
+	get_node("..").selected = null
+	get_node("..").mouse_deactivate()
 	var game = bookshelf.instance()
 	add_child(game)
 

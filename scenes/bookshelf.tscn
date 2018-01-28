@@ -167,7 +167,7 @@ margin/bottom = 960.0
 
 [node name="book0" type="Sprite" parent="books"]
 
-transform/pos = Vector2( 1730.06, 33.2636 )
+transform/pos = Vector2( 1904.39, 343.881 )
 transform/scale = Vector2( 1, 1 )
 z/z = 2
 texture = ExtResource( 3 )
@@ -185,7 +185,7 @@ script/script = ExtResource( 4 )
 
 [node name="book2" type="Sprite" parent="books"]
 
-transform/pos = Vector2( 1730.06, 157.94 )
+transform/pos = Vector2( 1730.06, 329.823 )
 transform/scale = Vector2( 1, 1 )
 z/z = 2
 texture = ExtResource( 6 )
@@ -194,7 +194,7 @@ script/script = ExtResource( 4 )
 
 [node name="book3" type="Sprite" parent="books"]
 
-transform/pos = Vector2( 1886.87, 155.723 )
+transform/pos = Vector2( 1897.91, 495.807 )
 transform/scale = Vector2( 1, 1 )
 z/z = 2
 texture = ExtResource( 7 )
@@ -203,7 +203,7 @@ script/script = ExtResource( 4 )
 
 [node name="book4" type="Sprite" parent="books"]
 
-transform/pos = Vector2( 1723.41, 331.369 )
+transform/pos = Vector2( 1746.73, 20.7512 )
 transform/scale = Vector2( 1, 1 )
 z/z = 2
 texture = ExtResource( 8 )
@@ -212,7 +212,7 @@ script/script = ExtResource( 4 )
 
 [node name="book5" type="Sprite" parent="books"]
 
-transform/pos = Vector2( 1899.05, 331.369 )
+transform/pos = Vector2( 1721.03, 494.658 )
 transform/scale = Vector2( 1, 1 )
 z/z = 2
 texture = ExtResource( 9 )
@@ -221,7 +221,7 @@ script/script = ExtResource( 4 )
 
 [node name="book6" type="Sprite" parent="books"]
 
-transform/pos = Vector2( 1725.62, 498.15 )
+transform/pos = Vector2( 1735.45, 202.265 )
 transform/scale = Vector2( 1, 1 )
 z/z = 2
 texture = ExtResource( 10 )
@@ -230,7 +230,7 @@ script/script = ExtResource( 4 )
 
 [node name="book7" type="Sprite" parent="books"]
 
-transform/pos = Vector2( 1894.62, 489.286 )
+transform/pos = Vector2( 1892.17, 161.48 )
 transform/scale = Vector2( 1, 1 )
 z/z = 2
 texture = ExtResource( 11 )
