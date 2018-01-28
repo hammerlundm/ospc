@@ -10,3 +10,4 @@ func _input(event):
 		clicks += 1
 		if clicks % 3 == 0:
 			get_tree().quit()
+		
