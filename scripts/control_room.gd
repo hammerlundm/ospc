@@ -33,7 +33,7 @@ func transmitter():
 		else:
 			get_node("../camera/textbox").display("I need a new wire... and a manual.")
 	else:
-		get_node("../camera/textbox").display("It's out of power.")
+		get_node("../camera/textbox").display("If it had power I could see why this transmitter isn't working.")
 
 func battery():
 	var x = get_node("..")
@@ -46,4 +46,4 @@ func battery():
 		x.battery_location = "inventory"
 		get_node("../camera/textbox").display("I might need this.")
 	else:
-		get_node("../camera/textbox").display("I need to power the transmitter.")
+		get_node("../camera/textbox").display("This is where the battery goes to power the transmitter.")

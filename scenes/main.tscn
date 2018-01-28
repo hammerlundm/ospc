@@ -149,15 +149,15 @@ border_size = 0
 border_blend = true
 draw_bg = true
 
-[sub_resource type="ConvexPolygonShape2D" id=15]
+[sub_resource type="ConvexPolygonShape2D" id=17]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 1284.74, 840.918, 1115.31, 832.324, 1096.76, 3.86401, 1274.97, 1.14328 )
+points = Vector2Array( 1284.74, 840.918, 975.348, 834.78, 987.625, 8.51242, 1274.97, 1.14328 )
 
 [sub_resource type="ConvexPolygonShape2D" id=16]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -7.8634, -0.217102, 166.265, 3.86401, 165.041, 826.185, 4.20764, 828.641 )
+points = Vector2Array( -7.8634, -0.217102, 307.459, -3.76503, 312.37, 828.641, 4.20764, 828.641 )
 
 [node name="main" type="Control"]
 
@@ -390,7 +390,7 @@ flat = false
 [node name="right" type="Area2D" parent="camera"]
 
 input/pickable = true
-shapes/0/shape = SubResource( 15 )
+shapes/0/shape = SubResource( 17 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
@@ -401,7 +401,7 @@ angular_damp = 1.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="camera/right"]
 
 build_mode = 0
-polygon = Vector2Array( 1274.97, 1.14328, 1096.76, 3.86401, 1115.31, 832.324, 1284.74, 840.918 )
+polygon = Vector2Array( 1274.97, 1.14328, 987.625, 8.51242, 975.348, 834.78, 1284.74, 840.918 )
 shape_range = Vector2( 0, 0 )
 trigger = false
 
@@ -420,7 +420,7 @@ angular_damp = 1.0
 
 transform/pos = Vector2( 6.13867, 3.68329 )
 build_mode = 0
-polygon = Vector2Array( 4.20764, 828.641, 165.041, 826.185, 166.265, 3.86401, -7.8634, -0.217102 )
+polygon = Vector2Array( 4.20764, 828.641, 312.37, 828.641, 307.459, -3.76503, -7.8634, -0.217102 )
 shape_range = Vector2( 0, 0 )
 trigger = false
 
