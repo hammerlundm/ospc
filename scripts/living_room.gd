@@ -1,11 +1,13 @@
 extends ParallaxBackground
 
+var bookshelf = preload("res://scenes/bookshelf.tscn")
+
 func _ready():
-	if "gloves" in get_node("..").inventory:
+	if "gloves" in get_node("..").inventory or "chemicals+gloves" in get_node("..").inventory or "tool" in get_node("..").inventory:
 		get_node("foreground/gloves").queue_free()
 	else:
 		get_node("foreground/gloves").connect("button_up", self, "add_gloves")
-	if "soap" in get_node("..").inventory:
+	if "soap" in get_node("..").inventory or "chemicals" in get_node("..").inventory or "chemicals+gloves" in get_node("..").inventory or "tool" in get_node("..").inventory:
 		get_node("foreground/soap").queue_free()
 	else:
 		get_node("foreground/soap").connect("button_up", self, "add_soap")
@@ -28,10 +30,8 @@ func add_soap():
 	get_node("..").mouse_deactivate()
 
 func add_manual():
-	get_parent().add_item("manual")
-	get_node("../camera/textbox").display("manual")
-	get_node("foreground/manual").queue_free()
-	get_node("..").mouse_deactivate()
+	var game = bookshelf.instance()
+	add_child(game)
 
 func add_battery():
 	if "battery" in get_node("..").inventory:

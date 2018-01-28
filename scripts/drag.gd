@@ -12,19 +12,31 @@ func _ready():
 func _input(event):
 	if event.type == InputEvent.MOUSE_BUTTON:
 		var click_pos = event.global_pos
-		if event.pressed:
+		if event.pressed and get_node("../..").selected == null:
 			var pos = get_global_pos()
 			var size = get_texture().get_size()
 			if check_collision(pos, size, click_pos):
 				dragging = true
+				get_node("../..").selected = self
 				offset = Vector2(click_pos.x - pos.x, click_pos.y - pos.y)
+				for i in range(8):
+					if get_node("../..").state[i] == self:
+						get_node("../..").state[i] = null
+						break
 		elif dragging:
 			dragging = false
+			get_node("../..").selected = null
 			var slot
 			for i in range(8):
 				slot = get_node("../../shelf/slot" + str(i))
 				if check_collision(slot.get_pos(), Vector2(128, 256), click_pos):
-					set_pos(slot.get_pos() + get_pos() - get_global_pos())
+					if get_node("../..").state[i] == null:
+						set_pos(slot.get_pos() + get_pos() - get_global_pos())
+						get_node("../..").state[i] = self
+					else:
+						set_pos(init_pos)
+					break
+			get_node("../..").test()
 
 func _process(delta):
 	if dragging:

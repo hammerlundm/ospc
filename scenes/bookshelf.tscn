@@ -1,8 +1,15 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=12 format=1]
 
 [ext_resource path="res://scripts/bookshelf.gd" type="Script" id=1]
-[ext_resource path="res://assets/alien.png" type="Texture" id=2]
+[ext_resource path="res://assets/book0.png" type="Texture" id=2]
 [ext_resource path="res://scripts/drag.gd" type="Script" id=3]
+[ext_resource path="res://assets/book1.png" type="Texture" id=4]
+[ext_resource path="res://assets/book5.png" type="Texture" id=5]
+[ext_resource path="res://assets/book6.png" type="Texture" id=6]
+[ext_resource path="res://assets/book2.png" type="Texture" id=7]
+[ext_resource path="res://assets/book3.png" type="Texture" id=8]
+[ext_resource path="res://assets/book4.png" type="Texture" id=9]
+[ext_resource path="res://assets/book7.png" type="Texture" id=10]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -148,49 +155,49 @@ script/script = ExtResource( 3 )
 [node name="book1" type="Sprite" parent="books"]
 
 transform/pos = Vector2( 128, 0 )
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 centered = false
 script/script = ExtResource( 3 )
 
 [node name="book2" type="Sprite" parent="books"]
 
 transform/pos = Vector2( 0, 128 )
-texture = ExtResource( 2 )
+texture = ExtResource( 5 )
 centered = false
 script/script = ExtResource( 3 )
 
 [node name="book3" type="Sprite" parent="books"]
 
 transform/pos = Vector2( 128, 128 )
-texture = ExtResource( 2 )
+texture = ExtResource( 6 )
 centered = false
 script/script = ExtResource( 3 )
 
 [node name="book4" type="Sprite" parent="books"]
 
 transform/pos = Vector2( 0, 256 )
-texture = ExtResource( 2 )
+texture = ExtResource( 7 )
 centered = false
 script/script = ExtResource( 3 )
 
 [node name="book5" type="Sprite" parent="books"]
 
 transform/pos = Vector2( 128, 256 )
-texture = ExtResource( 2 )
+texture = ExtResource( 8 )
 centered = false
 script/script = ExtResource( 3 )
 
 [node name="book6" type="Sprite" parent="books"]
 
 transform/pos = Vector2( 0, 384 )
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 centered = false
 script/script = ExtResource( 3 )
 
 [node name="book7" type="Sprite" parent="books"]
 
 transform/pos = Vector2( 128, 384 )
-texture = ExtResource( 2 )
+texture = ExtResource( 10 )
 centered = false
 script/script = ExtResource( 3 )
 

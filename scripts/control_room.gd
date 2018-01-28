@@ -1,5 +1,7 @@
 extends ParallaxBackground
 
+var transmission = preload("res://scenes/transmission.tscn")
+
 func _ready():
 	if "dirty_tool" in get_node("..").inventory or "tool" in get_node("..").inventory:
 		get_node("foreground/tool").queue_free()
@@ -22,7 +24,8 @@ func transmitter():
 	elif x.battery_location == "transmitter":
 		if x.selected == "wire":
 			if "manual" in x.inventory:
-				print("You win!")
+				var game = transmission.instance()
+				add_child(game)
 			else:
 				get_node("../camera/textbox").display("I need a manual")
 		else:

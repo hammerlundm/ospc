@@ -1,7 +1,9 @@
 extends ParallaxBackground
 
+var wire = preload("res://scenes/wire.tscn")
+
 func _ready():
-	if "rock" in get_node("..").inventory:
+	if "rock" in get_node("..").inventory or "chemicals" in get_node("..").inventory or "chemicals+gloves" in get_node("..").inventory or "tool" in get_node("..").inventory:
 		get_node("foreground/rock").queue_free()
 	else:
 		get_node("foreground/rock").connect("button_up", self, "add_rock")
@@ -18,11 +20,8 @@ func add_rock():
 
 func add_wire():
 	if get_node("..").selected == "tool":
-		get_parent().add_item("wire")
-		get_node("../camera/textbox").display("I got a wire")
-		get_node("foreground/wire").queue_free()
-		get_node("..").selected = null
-		get_node("..").mouse_deactivate()
+		var game = wire.instance()
+		add_child(game)
 	elif "tool" in get_node("..").inventory:
 		get_node("../camera/textbox").display("I should use my tool")
 	else:

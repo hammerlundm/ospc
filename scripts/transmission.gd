@@ -1,7 +1,7 @@
 extends Node2D
 
 var state = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-var solution = [-1, -1, 2, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+var solution = [1, 3, -1, 2, 2, -1, -1, 3, 0, 1, 1, 2, 1, -1, 3, 1]
 
 func _ready():
 	var button
@@ -14,11 +14,10 @@ func twist(node, idx):
 	var size = node.get_normal_texture().get_size()
 	node.set_pos(node.get_pos() - size * Vector2(cos(node.get_rotation()), -sin(node.get_rotation())))
 	state[idx] = (state[idx] + 1) % 4
-	if test():
-		print("You won!")
+	test()
 
 func test():
 	for i in range(16):
 		if solution[i] != -1 and solution[i] != state[i]:
-			return false
-	return true
+			return
+	get_tree().get_root().queue_free()

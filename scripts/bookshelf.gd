@@ -1,7 +1,20 @@
 extends Node2D
 
+var selected = null
+var state = [null, null, null, null, null, null, null, null]
+
 func _ready():
 	var book
 	for i in range(8):
 		book = get_node("books/book" + str(i))
 		
+func test():
+	for i in range(8):
+		if state[i] == null or int(state[i].get_name()[-1]) != i:
+			return
+	queue_free()
+	get_node("../..").add_item("manual")
+	get_node("../../camera/textbox").display("manual")
+	get_node("../foreground/manual").queue_free()
+	get_node("../..").mouse_deactivate()
+	

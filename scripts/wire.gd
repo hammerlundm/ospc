@@ -16,4 +16,9 @@ func set_inside(body, val):
 
 func _input(event):
 	if inside && event.type == InputEvent.MOUSE_BUTTON && event.pressed:
-		print("You won!")
+		queue_free()
+		get_node("../..").add_item("wire")
+		get_node("../../camera/textbox").display("I got a wire")
+		get_node("../foreground/wire").queue_free()
+		get_node("../..").selected = null
+		get_node("../..").mouse_deactivate()

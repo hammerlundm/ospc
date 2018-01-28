@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://scripts/transmission.gd" type="Script" id=1]
-[ext_resource path="res://assets/alien.png" type="Texture" id=2]
+[ext_resource path="res://assets/L2.png" type="Texture" id=2]
+[ext_resource path="res://assets/L.png" type="Texture" id=3]
+[ext_resource path="res://assets/plus.png" type="Texture" id=4]
+[ext_resource path="res://assets/L3.png" type="Texture" id=5]
+[ext_resource path="res://assets/L4.png" type="Texture" id=6]
 
 [node name="transmission" type="Node2D"]
 
@@ -56,7 +60,7 @@ margin/bottom = 136.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
+textures/normal = ExtResource( 3 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -77,7 +81,7 @@ margin/bottom = 136.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
+textures/normal = ExtResource( 4 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -98,7 +102,7 @@ margin/bottom = 136.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
+textures/normal = ExtResource( 3 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -119,7 +123,7 @@ margin/bottom = 8.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
+textures/normal = ExtResource( 5 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -140,7 +144,7 @@ margin/bottom = 8.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
+textures/normal = ExtResource( 4 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -161,7 +165,7 @@ margin/bottom = 8.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
+textures/normal = ExtResource( 4 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -182,7 +186,7 @@ margin/bottom = 8.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
+textures/normal = ExtResource( 5 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -203,7 +207,7 @@ margin/bottom = -118.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
+textures/normal = ExtResource( 6 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -224,7 +228,7 @@ margin/bottom = -118.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
+textures/normal = ExtResource( 3 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -245,7 +249,7 @@ margin/bottom = -118.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
+textures/normal = ExtResource( 5 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -266,7 +270,7 @@ margin/bottom = -118.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
+textures/normal = ExtResource( 3 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -287,7 +291,7 @@ margin/bottom = -246.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
+textures/normal = ExtResource( 6 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -308,7 +312,7 @@ margin/bottom = -246.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
+textures/normal = ExtResource( 4 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -329,7 +333,7 @@ margin/bottom = -246.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
+textures/normal = ExtResource( 5 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -350,7 +354,7 @@ margin/bottom = -246.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 2 )
+textures/normal = ExtResource( 6 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
