@@ -34,11 +34,11 @@ func add_manual():
 	add_child(game)
 
 func add_battery():
-	if "battery" in get_node("..").inventory:
+	if get_node("..").selected == "battery":
 		get_node("..").remove_item("battery")
 		get_node("../camera/textbox").display("put the battery back")
 		get_node("..").battery_location = "suit"
-	else:
+	elif get_node("..").battery_location == "suit":
 		get_parent().add_item("battery")
 		get_node("../camera/textbox").display("got the battery")
 		get_node("..").mouse_deactivate()

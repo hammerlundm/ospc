@@ -34,6 +34,7 @@ centered = false
 
 [node name="to_living" type="TextureButton" parent="foreground"]
 
+visibility/opacity = 0.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -53,6 +54,7 @@ HOVER = true
 
 [node name="rock" type="TextureButton" parent="foreground"]
 
+visibility/opacity = 0.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -72,6 +74,7 @@ HOVER = true
 
 [node name="wire" type="TextureButton" parent="foreground"]
 
+visibility/opacity = 0.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2

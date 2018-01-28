@@ -48,44 +48,47 @@ centered = false
 
 [node name="to_space" type="TextureButton" parent="foreground"]
 
+visibility/opacity = 0.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 2068.0
+margin/left = 1967.0
 margin/top = 31.0
-margin/right = 2196.0
+margin/right = 2254.0
 margin/bottom = 159.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 textures/normal = ExtResource( 5 )
-params/resize_mode = 0
+params/resize_mode = 1
 params/stretch_mode = 0
 script/script = ExtResource( 6 )
 HOVER = true
 
 [node name="to_control" type="TextureButton" parent="foreground"]
 
+visibility/opacity = 0.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 2255.0
+margin/left = 2201.0
 margin/top = 342.0
-margin/right = 2383.0
+margin/right = 2428.0
 margin/bottom = 470.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 textures/normal = ExtResource( 5 )
-params/resize_mode = 0
+params/resize_mode = 1
 params/stretch_mode = 0
 script/script = ExtResource( 6 )
 HOVER = true
 
 [node name="gloves" type="TextureButton" parent="foreground"]
 
+visibility/opacity = 0.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -105,6 +108,7 @@ HOVER = true
 
 [node name="soap" type="TextureButton" parent="foreground"]
 
+visibility/opacity = 0.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -124,6 +128,7 @@ HOVER = true
 
 [node name="manual" type="TextureButton" parent="foreground"]
 
+visibility/opacity = 0.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -143,6 +148,7 @@ HOVER = true
 
 [node name="battery" type="TextureButton" parent="foreground"]
 
+visibility/opacity = 0.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2

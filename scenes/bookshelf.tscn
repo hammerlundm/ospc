@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=1]
+[gd_scene load_steps=13 format=1]
 
 [ext_resource path="res://scripts/bookshelf.gd" type="Script" id=1]
 [ext_resource path="res://assets/book0.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://assets/book3.png" type="Texture" id=8]
 [ext_resource path="res://assets/book4.png" type="Texture" id=9]
 [ext_resource path="res://assets/book7.png" type="Texture" id=10]
+[ext_resource path="res://icon.png" type="Texture" id=11]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -200,5 +201,22 @@ transform/pos = Vector2( 128, 384 )
 texture = ExtResource( 10 )
 centered = false
 script/script = ExtResource( 3 )
+
+[node name="quit" type="TextureButton" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 817.0
+margin/top = 3.0
+margin/right = 945.0
+margin/bottom = 131.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 11 )
+params/resize_mode = 0
+params/stretch_mode = 0
 
 

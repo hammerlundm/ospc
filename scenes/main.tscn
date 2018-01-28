@@ -191,10 +191,9 @@ drag_margin/bottom = 0.2
 script/script = ExtResource( 2 )
 SPEED = 300
 
-[node name="textbox" parent="camera" instance=ExtResource( 3 )]
-
 [node name="inventory" type="Panel" parent="camera"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -384,6 +383,8 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 flat = false
+
+[node name="textbox" parent="camera" instance=ExtResource( 3 )]
 
 [node name="right" type="Area2D" parent="camera"]
 

@@ -4,6 +4,7 @@ var selected = null
 var state = [null, null, null, null, null, null, null, null]
 
 func _ready():
+	get_node("quit").connect("button_up", self, "queue_free")
 	var book
 	for i in range(8):
 		book = get_node("books/book" + str(i))
